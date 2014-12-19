@@ -1,0 +1,15 @@
+{
+  "title": "modaltest",
+  "name": "modaltest",
+  "version": "0.0.0",
+  "description": "modaltest",
+  "author": "kokoe",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
