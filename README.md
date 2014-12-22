@@ -7,5 +7,5 @@
 Sonicmoovラボの記事＆ソニックムーブアドベントカレンダー2014のためのソースです。
 詳細は以下参照ください。
 
-
+http://lab.sonicmoov.com/development/javascript/modal/
 http://www.adventar.org/calendars/605
