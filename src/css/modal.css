@@ -5,30 +5,45 @@
  */
 
 html, body {
-    height: 100%;
+    height: 100%; /* #wrap min-height: 100%;を実装するために必要 */
 }
+
+/* body直下のwapper */
 #wrap {
+    position: relative; /* .modalBaseLayer position: absolute;の基準要素となります */
+    min-height: 100%;   /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+
+    overflow-x: hidden; /* スマートフォンで横スクロールがでないようにする対策 */
+    width: 100%;        /* スマートフォンで横スクロールがでないようにする対策 */
+    margin: 0 auto;
+}
+
+/* #wrap直下のページコーディングエリア */
+#contents {
     position: relative;
-    min-height: 100%;
+    z-index: 1;
 }
+
+/* モーダルウィンドウ下層のベースレイヤー */
 .modalBaseLayer {
-    visibility: hidden;
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    background-color: rgba(0,0,0, 0.3);
-    /*background-color: #000;*/
+    visibility: hidden; /* visibilityプロパティ値を操作することで、モーダルウィンドウを表示・非表示することができます */
+    position: absolute; /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    z-index: 10;        /* #contentsより上のレイヤーに表示するために必要 */
+    top: 0;             /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    left: 0;            /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    right: 0;           /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    bottom: 0;          /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    margin: auto;       /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    width: 100%;        /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
+    background-color: rgba(0,0,0,0.3); /* モーダルのベースレイヤを、黒の透明度30%で表示 */
 }
+
+/* モーダルウィンドウ */
 .modal {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    margin: auto;
-    background-color: #fff;
+    position: absolute; /* .modalBaseLayer を、基準要素として絶対配置 */
+    top: 10px;          /* モーダルウィンドウの上余白 */
+    left: 10px;         /* モーダルウィンドウの左余白 */
+    right: 10px;        /* モーダルウィンドウの右余白 */
+    margin: auto;       /* モーダルウィンドウを左右中央配置（幅指定された場合用） */
+    background-color: #fff; /* モーダルウィンドウの背景色 */
 }
