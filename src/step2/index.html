@@ -22,7 +22,7 @@
             <h1>モーダルウィンドウ：Step1</h1>
             <p>スクロールしている場合は、表示中のウィンドウの位置にモーダルウィンドウが表示されるようにする。</p>
             <br>
-            <a class="openModal" href="javascript:void(0)">クリックするとモーダルが開くよ</a><br>
+            <a class="openModal" href="#modalBaseLayer1">クリックすると「モーダル1」が開くよ</a><br>
             <br>
             スクロールしてください<br>
             スクロールしてください<br>
@@ -68,7 +68,7 @@
             スクロールしてください<br>
             スクロールしてください<br>
             スクロールしてください<br>
-            <a class="openModal" href="javascript:void(0)">クリックするとモーダルが開くよ</a><br>
+            <a class="openModal" href="#modalBaseLayer2">クリックすると「モーダル2」が開くよ</a><br>
         </div>
 
         <!--
@@ -76,12 +76,19 @@
              .modalBaseLayer -> モーダルウィンドウ下の黒いレイヤー層
              .modal -> モーダルウィンドウ
         -->
-        <div id="modalBaseLayer" class="modalBaseLayer">
-            <div id="modal" class="modal">
-                モーダルウィンドウが開きましたね。
-                <a href="javascript:void(0)" id="closeModal">閉じる</a>
+        <div id="modalBaseLayer1" class="modalBaseLayer">
+            <div class="modal">
+                モーダル1です。
+                <a href="javascript:void(0)" class="closeModal">閉じる</a>
             </div>
-        <!-- /#modalBaseLayer --></div>
+        <!-- /#modalBaseLayer1 --></div>
+
+        <div id="modalBaseLayer2" class="modalBaseLayer">
+            <div class="modal">
+                モーダル2です。
+                <a href="javascript:void(0)" class="closeModal">閉じる</a>
+            </div>
+        <!-- /#modalBaseLayer2 --></div>
 
     <!-- /#wrap --></div>
 

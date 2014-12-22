@@ -4,9 +4,9 @@
 
 $(function() {
 
-    var $trigger    = $('#openModal');
-    var $baseLayer  = $('#modalBaseLayer');
-    var $modalClose = $('#closeModal');
+    var $openTrigger  = $('#openModal');
+    var $baseLayer    = $('#modalBaseLayer');
+    var $closeTrigger = $('#closeModal');
 
 
     function showModal() {
@@ -17,21 +17,21 @@ $(function() {
         $baseLayer.css('visibility', 'hidden');
     }
 
-    function bindTriggerClick() {
-        $trigger.on('click', function(event) {
+    function bindOpenModal() {
+        $openTrigger.on('click', function(event) {
             event.preventDefault();
             showModal();
         });
     }
 
     function bindCloseModal() {
-        $modalClose.on('click', function(event) {
+        $closeTrigger.on('click', function(event) {
             event.preventDefault();
             hideModal();
         });
     }
 
-    bindTriggerClick();
+    bindOpenModal();
     bindCloseModal();
 
 });

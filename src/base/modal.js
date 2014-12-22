@@ -4,32 +4,32 @@
 
 window.addEventListener('DOMContentLoaded', function() {
 
-    var trigger    = document.getElementById('openModal');
-    var baseLayer  = document.getElementById('modalBaseLayer');
-    var modalClose = document.getElementById('closeModal');
+    var openTrigger  = document.getElementById('openModal');
+    var baseLayer    = document.getElementById('modalBaseLayer');
+    var closeTrigger = document.getElementById('closeModal');
 
 
     /**
      * モーダルを開く
-     * モーダルベースレイヤ、style属性のCSSプロパティ値（visibility）の値を変えるだけ
      */
     function showModal() {
+        // モーダルベースレイヤを表示する
         baseLayer.style.visibility = 'visible';
     }
 
     /**
      * モーダルを閉じる
-     * モーダルベースレイヤ、style属性のCSSプロパティ値（visibility）の値を変えるだけ
      */
     function hideModal() {
+        // モーダルベースレイヤを非表示にする
         baseLayer.style.visibility = 'hidden';
     }
 
     /**
      * 「クリックするとモーダルが開くよ」をクリックしたときの処理
      */
-    function bindTriggerClick() {
-        trigger.addEventListener('click', function(event) {
+    function bindOpenModal() {
+        openTrigger.addEventListener('click', function(event) {
             // デフォルトのイベント（ここではa要素のイベント）をキャンセル
             event.preventDefault();
             // モーダルを表示
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
      * モーダル内の「閉じる」をクリックしたときの処理
      */
     function bindCloseModal() {
-        modalClose.addEventListener('click', function(event) {
+        closeTrigger.addEventListener('click', function(event) {
             // デフォルトのイベント（ここではa要素のイベント）をキャンセル
             event.preventDefault();
             // モーダルを非表示
@@ -50,7 +50,10 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    bindTriggerClick();
+    // モーダルを開くためのイベントリスナを設定
+    bindOpenModal();
+
+    // モーダルを閉じるためのイベントリスナを設定
     bindCloseModal();
 
 }, false);

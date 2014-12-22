@@ -12,8 +12,8 @@ html, body {
 #wrap {
     position: relative; /* .modalBaseLayer position: absolute;の基準要素となります */
     min-height: 100%;   /* .modalBaseLayer を、画面ぴったりに縦横100%指定するために必要 */
-
-    overflow-x: hidden; /* スマートフォンで横スクロールがでないようにする対策 */
+    overflow: hidden;   /* モーダルウィンドウの高さが、#wrapの高さを超えても表示に問題がでないように。
+                           あと、スマートフォンで横スクロールがでないようにする対策 */
     width: 100%;        /* スマートフォンで横スクロールがでないようにする対策 */
     margin: 0 auto;
 }
