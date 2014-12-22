@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Modal Window</title>
+
+<!-- スマートフォンサイトなら、この記述をいれましょう -->
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- reset.css -->
+<link rel="stylesheet" type="text/css" href="//yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+
+<!-- モーダルウィンドウを実装する際の基本CSS -->
+<link rel="stylesheet" type="text/css" href="/css/modal.css">
+
+</head>
+<body>
+    <div id="wrap">
+
+        <!-- #contents内に、ページのコーディングをしていきます -->
+        <div id="contents">
+            <a class="openModal" href="javascript:void(0)">クリックするとモーダルが開くよ</a><br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            スクロールしてください<br>
+            <a class="openModal" href="javascript:void(0)">クリックするとモーダルが開くよ</a><br>
+        </div>
+
+        <!--
+             #contentsの同階層に、モーダルウィンドウの記述をしていきます
+             .modalBaseLayer -> モーダルウィンドウ下の黒いレイヤー層
+             .modal -> モーダルウィンドウ
+        -->
+        <div id="modalBaseLayer" class="modalBaseLayer">
+            <div id="modal" class="modal">
+                モーダルウィンドウが開きましたね。
+                <a href="javascript:void(0)" id="closeModal">閉じる</a>
+            </div>
+        <!-- /#modalBaseLayer --></div>
+
+    <!-- /#wrap --></div>
+
+    <script src="./modal.js"></script>
+
+    <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+    <!-- <script src="./modal.jquery.js"></script> -->
+</body>
+</html>
