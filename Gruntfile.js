@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 hostname   : 'localhost',
                 base       : 'src',
                 open       : true,
-                livereload : true,
+                livereload : false,
                 keepalive  : false
             },
             dev: {
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         // https://github.com/gruntjs/grunt-contrib-watch
         watch: {
             options: {
-                livereload: true
+                livereload: false
             },
             files: {
                 files: 'src/{,**/}*'

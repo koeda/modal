@@ -58,11 +58,19 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
+     * window.scrollYを返す
+     * https://developer.mozilla.org/ja/docs/Web/API/window.scrollY
+     */
+    function getScrollY() {
+        return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    }
+
+    /**
      * モーダルウィンドウのTOP値に、スクロールY値を加算した値をセットする
      */
     function setModalTop() {
         // スクロールY値を加算した値をセットする
-        modal.style.top = defaultMargin + window.scrollY + 'px';
+        modal.style.top = defaultMargin + getScrollY() + 'px';
     }
 
     /**

@@ -85,11 +85,19 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     /**
+     * window.scrollYを返す
+     * https://developer.mozilla.org/ja/docs/Web/API/window.scrollY
+     */
+    function getScrollY() {
+        return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    }
+
+    /**
      * モーダルウィンドウのTOP値に、スクロールY値を加算した値をセットする
      */
     function setModalTop(modal) {
         // スクロールY値を加算した値をセットする
-        modal.style.top = defaultMargin + window.scrollY + 'px';
+        modal.style.top = defaultMargin + getScrollY() + 'px';
     }
 
     /**
@@ -111,7 +119,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // モーダルウィンドウの底辺座標を返す
         function getModalOffsetBottom() {
             var modalBound = modal.getBoundingClientRect();
-            return window.scrollY + (defaultMargin * 2) + modalBound.height;
+            return getScrollY() + (defaultMargin * 2) + modalBound.height;
         }
 
         // #wrapの底辺座標（というか#wrap高さですが）

@@ -44,7 +44,7 @@
 * HTML/CSS
 * Javascript
 
-### 応用編(1)
+### 応用編
 
 #### Step1
 
