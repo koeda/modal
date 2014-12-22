@@ -28,21 +28,29 @@ window.addEventListener('DOMContentLoaded', function() {
     /**
      * 「クリックするとモーダルが開くよ」をクリックしたときの処理
      */
-    trigger.addEventListener('click', function(event) {
-        // デフォルトのイベント（ここではa要素のイベント）をキャンセル
-        event.preventDefault();
-        // モーダルを表示
-        showModal();
-    }, false);
+    function bindTriggerClick() {
+        trigger.addEventListener('click', function(event) {
+            // デフォルトのイベント（ここではa要素のイベント）をキャンセル
+            event.preventDefault();
+            // モーダルを表示
+            showModal();
+        }, false);
+    }
 
     /**
      * モーダル内の「閉じる」をクリックしたときの処理
      */
-    modalClose.addEventListener('click', function(event) {
-        // デフォルトのイベント（ここではa要素のイベント）をキャンセル
-        event.preventDefault();
-        // モーダルを非表示
-        hideModal();
-    }, false);
+    function bindCloseModal() {
+        modalClose.addEventListener('click', function(event) {
+            // デフォルトのイベント（ここではa要素のイベント）をキャンセル
+            event.preventDefault();
+            // モーダルを非表示
+            hideModal();
+        }, false);
+    }
+
+
+    bindTriggerClick();
+    bindCloseModal();
 
 }, false);

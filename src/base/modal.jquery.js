@@ -17,14 +17,21 @@ $(function() {
         $baseLayer.css('visibility', 'hidden');
     }
 
-    $trigger.on('click', function(event) {
-        event.preventDefault();
-        showModal();
-    });
+    function bindTriggerClick() {
+        $trigger.on('click', function(event) {
+            event.preventDefault();
+            showModal();
+        });
+    }
 
-    $modalClose.on('click', function(event) {
-        event.preventDefault();
-        hideModal();
-    });
+    function bindCloseModal() {
+        $modalClose.on('click', function(event) {
+            event.preventDefault();
+            hideModal();
+        });
+    }
+
+    bindTriggerClick();
+    bindCloseModal();
 
 });
